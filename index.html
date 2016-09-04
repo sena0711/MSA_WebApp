@@ -9,29 +9,41 @@
     <!--Custom CSS-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-   <head>
-    <body>
-      <div class = "navicator" id = "nav">
-        <center>
-          <!--navigation-->
-          <ul id= "navul">
-            <li> Home </li>
-             <li> Product </li>
-              <li> Download </li>
-              <li> Contact </li>
-              <li> Login </li>
-          </center>
-       </div>
+   <head>   
 
-        <div class="container" id="page-container">
-         
-            <h1 id="app-name">
+<body>
+    <header>
+         <div class = "header" id = "h1">
+         <h1 id="app-name">
               <img src="./image/massivekittens2.png" height="84" width="84">
                   MassiveKittens
             </h1>
+
+               </center>
+        </div>
+
+            
+
+    <header>
+     <nav>
+         <ul class = "navicator" id = "nav">
+            
+                <li><a href="#Home">Home</a></li>
+                <li> <a href="#Product">Product </a></li>
+                <li> <a href="#Download">Download </a></li>
+                <li> <a href="#Contact">Contact </a></li>
+                <li><a href="#Login"> Login </a></li>
+                <li class="icon">
+        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+            </ul>
+    
+    <nav>
+        <div class="container" id="page-container">
+         
+           
             <!-- NB: glyphicon halflings are generally not free, but the developer made them free in bootstrap -->
 
-            <h2 id="page-header">
+            <h2 id="page-content">
                 Get song recommendations based on your mood.
             </h2>
             <img id="selected-img" src="">
