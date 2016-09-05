@@ -79,3 +79,27 @@ input#my-file-selector {
 h4#track-name {
     display:none;
 }
+
+footer {
+    background: #555;
+        text-align: center;
+    }
+    footer .major h2,
+        footer .major .byline {
+            color: #FFF !important;
+        }
+
+
+
+
+
+
+
+/* Box */
+
+    footer.box {
+        padding: 3em 2em;
+        background: #FFF;
+        text-align: center;
+        border-radius: 0px 0px 6px 6px;
+    }
