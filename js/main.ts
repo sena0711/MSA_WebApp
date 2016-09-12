@@ -205,9 +205,7 @@ function loadSong(currentMood : Mood) : void {
     loadPlayer(track_url); // load soundcloud player to play this song
 }
 
-var myClientId ="2d07c634b456fed2c22a7c7b3e72869b"
-
-// "8f2bba4a309b295e1f74ee38b8a5017b";
+var myClientId = "8f2bba4a309b295e1f74ee38b8a5017b";
 
 function initSC() : void {
     // init SoundCloud
@@ -222,10 +220,6 @@ function loadPlayer(trackurl : string) : void {
         div.innerHTML = oEmbed.html; // puts the soundcloud player inside the musicplayer div
     });
 }
-
-
-
-
 
 // Initialise playlist and soundcloud
 init();

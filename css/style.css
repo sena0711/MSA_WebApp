@@ -1,43 +1,18 @@
 html { 
-    background: url("http://www.motionbackgroundsforfree.com/wp-content/uploads/2016/04/700-min.jpg") no-repeat center center fixed; 
+    background: url("http://theme.dima-lab.com/okab/images/landing-page-iphone/blurred-home-bg.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-/* The navigation bar */
-ul#nav{
-       float: center;
-    color: white;
-    padding: 26px;
-    text-decoration: none;
-     background-color: cornflowerblue;
-}
-
-li {
-    float: left;
- 
-}
-
-li a {
-   
-    color: white;
-    padding: 26px;
-    text-decoration: none;   
-}
-
 body {
-    color: black;
+    color: white;
     background-color: transparent;
 }
 
-
 h1#app-name {
-    margin-top: 5;
-    text-align: center;
-    font-size:54px;
-  
+    font-size:84px;
 }
 
 button#refreshbtn {
@@ -52,13 +27,13 @@ img#selected-img{
     margin: 0 auto;
 }
 
-h2#page-content {
-    padding-top:150px;
+h2#page-header {
+    padding-top:20px;
     padding-bottom:20px;
 }
 
 body #page-container {
-    margin-top: 0;
+    margin-top: 150px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -79,27 +54,3 @@ input#my-file-selector {
 h4#track-name {
     display:none;
 }
-
-footer {
-    background: #555;
-        text-align: center;
-    }
-    footer .major h2,
-        footer .major .byline {
-            color: #FFF !important;
-        }
-
-
-
-
-
-
-
-/* Box */
-
-    footer.box {
-        padding: 3em 2em;
-        background: #FFF;
-        text-align: center;
-        border-radius: 0px 0px 6px 6px;
-    }
