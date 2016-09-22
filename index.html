@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Massive Kittens</title>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Massive Kittens</title>
 
 
-        <!--Boostrap's CSS-->
-        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <!--Custom CSS-->
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-         
+    <!--Boostrap's CSS-->
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-        <!-- 
+
+    <!-- 
         To collect end-user usage analytics about your application,insert the following script into each page you want to track.
         Place this code immediately before the closing </head> tag, and before any other scripts. Your first data will appear 
         automatically in just a few seconds.-->
 
 
-        <script type="text/javascript">
-        var appInsights=window.appInsights||function(config){
-            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
-            }({
-                instrumentationKey:"4be2c999-8ef7-45cc-9070-7be9e58a48ff"
-            });
-            
-            window.appInsights=appInsights;
-            appInsights.trackPageView();
-        </script>
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function(config) {
+            function r(config) {
+                t[config] = function() {
+                    var i = arguments;
+                    t.queue.push(function() {
+                        t[config].apply(t, i)
+                    })
+                }
+            }
+            var t = {
+                    config: config
+                },
+                u = document,
+                e = window,
+                o = "script",
+                s = u.createElement(o),
+                i, f;
+            s.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js";
+            u.getElementsByTagName(o)[0].parentNode.appendChild(s);
+            try {
+                t.cookie = u.cookie
+            } catch (h) {}
+            for (t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; i.length;) r("track" + i.pop());
+            return r("setAuthenticatedUserContext"), r("clearAuthenticatedUserContext"), config.disableExceptionTracking || (i = "onerror", r("_" + i), f = e[i], e[i] = function(config, r, u, e, o) {
+                var s = f && f(config, r, u, e, o);
+                return s !== !0 && t["_" + i](config, r, u, e, o), s
+            }), t
+        }({
+            instrumentationKey: "4be2c999-8ef7-45cc-9070-7be9e58a48ff"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
 
 
 
-    </head>
-    <body>
-        <!-- Navigation -->
+</head>
+
+<body>
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -56,7 +83,7 @@
                     <li>
                         <a href="index.html">Home</a>
                     </li>
-                   
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,30 +100,28 @@
 
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4w_pgN33SdLkXEUiFLKZp7hBSa95qFcE&callback=Map">
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4w_pgN33SdLkXEUiFLKZp7hBSa95qFcE&callback=initMap">
     </script>
-   
 
 
-
-
-
-           <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; MassiveKittens 2016</p>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; MassiveKittens 2016</p>
             </div>
-            <!-- /.row -->
-        </footer>
+        </div>
+        <!-- /.row -->
+    </footer>
 
 
-    <!-- /.container --> 
+    <!-- /.container -->
 
 
-        <!-- 
+    <!-- 
             NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)
             will sort that in later bootcamps with task-runners and the like.
             For now this is just a demonstration.
@@ -104,15 +129,17 @@
             Alternatively can use CDNs for bootstrap/jquery
         -->
 
-        <!--jQuery Script-->
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <!--Bootstrap Script-->
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!--SoundCloud SDK-->
-        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-        <!--Custom Script-->
-        <script src="./js/main.js"></script>
-         <!--Google Map API KEY and Script-->
-        
-    </body>
+
+    <!--jQuery Script-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Bootstrap Script-->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--SoundCloud SDK-->
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <!--Custom Script-->
+    <script src="./js/main.js"></script>
+    <!--Google Map API KEY and Script-->
+
+</body>
+
 </html>
