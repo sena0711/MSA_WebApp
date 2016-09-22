@@ -99,6 +99,18 @@
     <!-- Content Section -->
 
     <h3> My Google Maps</h3>
+
+    <form name="searchForm" novalidate ng-submit="search()">
+        <div class="input-group">
+           
+            <input id="pac-input" class="form-control" type="text" placeholder="Search Place" required autofocus />
+            <span class="input-group-btn">
+                <button class="btn btn-primary" 
+                ng-disabled="searchForm.$invalid">Search</button>
+            </span>
+        </div>
+    </form>
+
     <div id="map"></div>
 
 
