@@ -40,7 +40,7 @@ app.service('Map', function($q) {
 app.controller('newPlaceCtrl', function($scope, Map) {
     
     $scope.place = {};
-    
+    api
     $scope.search = function() {
         $scope.apiError = false;
         Map.search($scope.searchPlace)
