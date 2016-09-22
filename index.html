@@ -72,6 +72,7 @@
     <!-- Content Section -->
     <section>
     <div class="container" ng-app="myApp" ng-controller="newPlaceCtrl">
+         <h3>My Google Maps </h3>
     
         <form name="searchForm" novalidate 
         ng-submit="search()">
@@ -135,5 +136,8 @@
         <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
         <!--Custom Script-->
         <script src="./js/main.js"></script>
-    </body>
+         <!--Google Map API KEY and Script-->
+         <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </html>
