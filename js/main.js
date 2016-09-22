@@ -6,69 +6,69 @@
           });
       }
 
+      function initAutocomplete() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+              center: { lat: -33.8688, lng: 151.2195 },
+              zoom: 13,
+              mapTypeId: 'roadmap'
+          });
 
-      var app = angular.module('myApp', []);
+          // Create the search box and link it to the UI element.
+          var input = document.getElementById('pac-input');
+          var searchBox = new google.maps.places.SearchBox(input);
+          map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-      app.service('Map', function($q) {
+          // Bias the SearchBox results towards current map's viewport.
+          map.addListener('bounds_changed', function() {
+              searchBox.setBounds(map.getBounds());
+          });
 
-          this.init = function() {
-              var options = {
-                  center: new google.maps.LatLng(40.7127837, -74.00594130000002),
-                  zoom: 13,
-                  disableDefaultUI: true
+          var markers = [];
+          // Listen for the event fired when the user selects a prediction and retrieve
+          // more details for that place.
+          searchBox.addListener('places_changed', function() {
+              var places = searchBox.getPlaces();
+
+              if (places.length == 0) {
+                  return;
               }
-              this.map = new google.maps.Map(
-                  document.getElementById("map"), options
-              );
-              this.places = new google.maps.places.PlacesService(this.map);
-          }
 
-          this.search = function(str) {
-              var d = $q.defer();
-              this.places.textSearch({ query: str }, function(results, status) {
-                  if (status == 'OK') {
-                      d.resolve(results[0]);
-                  } else d.reject(status);
+              // Clear out the old markers.
+              markers.forEach(function(marker) {
+                  marker.setMap(null);
               });
-              return d.promise;
-          }
+              markers = [];
 
-          this.addMarker = function(res) {
-              if (this.marker) this.marker.setMap(null);
-              this.marker = new google.maps.Marker({
-                  map: this.map,
-                  position: res.geometry.location,
-                  animation: google.maps.Animation.DROP
+              // For each place, get the icon, name and location.
+              var bounds = new google.maps.LatLngBounds();
+              places.forEach(function(place) {
+                  if (!place.geometry) {
+                      console.log("Returned place contains no geometry");
+                      return;
+                  }
+                  var icon = {
+                      url: place.icon,
+                      size: new google.maps.Size(71, 71),
+                      origin: new google.maps.Point(0, 0),
+                      anchor: new google.maps.Point(17, 34),
+                      scaledSize: new google.maps.Size(25, 25)
+                  };
+
+                  // Create a marker for each place.
+                  markers.push(new google.maps.Marker({
+                      map: map,
+                      icon: icon,
+                      title: place.name,
+                      position: place.geometry.location
+                  }));
+
+                  if (place.geometry.viewport) {
+                      // Only geocodes have viewport.
+                      bounds.union(place.geometry.viewport);
+                  } else {
+                      bounds.extend(place.geometry.location);
+                  }
               });
-              this.map.setCenter(res.geometry.location);
-          }
-
-      });
-
-      app.controller('newPlaceCtrl', function($scope, Map) {
-
-          $scope.place = {};
-
-          $scope.search = function() {
-              $scope.apiError = false;
-              Map.search($scope.searchPlace)
-                  .then(
-                      function(res) { // success
-                          Map.addMarker(res);
-                          $scope.place.name = res.name;
-                          $scope.place.lat = res.geometry.location.lat();
-                          $scope.place.lng = res.geometry.location.lng();
-                      },
-                      function(status) { // error
-                          $scope.apiError = true;
-                          $scope.apiStatus = status;
-                      }
-                  );
-          }
-
-          $scope.send = function() {
-              alert($scope.place.name + ' : ' + $scope.place.lat + ', ' + $scope.place.lng);
-          }
-
-          Map.init();
-      });
+              map.fitBounds(bounds);
+          });
+      }
