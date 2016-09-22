@@ -70,39 +70,12 @@
     </header>
 
     <!-- Content Section -->
-    <section>
-         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div class="container" ng-app="myApp" ng-controller="newPlaceCtrl">
-         <h3>My Google Maps </h3>
-    
-        <form name="searchForm" novalidate 
-        ng-submit="search()">
-            <div class="input-group">
-                <input name="place" type="text" class="form-control" 
-                ng-model="searchPlace" required autofocus />
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" 
-                    ng-disabled="searchForm.$invalid">Search</button>
-                </span>
-            </div>
-        </form>
-        
-    <div id="map"></div>
-      
-    <form name="resForm" class="form-horizontal" novalidate
-       ng-submit="send()">
-        <div class="form-group">
-            <label for="resName" class="col-xs-2 control-label">Name</label>
-            <div class="col-xs-10">
-                <input name="resName" type="text" class="form-control" 
-                ng-model="place.name" required />
-            </div>
-        </div>
 
-    </form>
-    
-</div>
-    </section>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+
+   
+
 
 
 
@@ -117,7 +90,7 @@
             <!-- /.row -->
         </footer>
 
-    </div>
+
     <!-- /.container --> 
 
 
@@ -141,4 +114,5 @@
          <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4w_pgN33SdLkXEUiFLKZp7hBSa95qFcE&callback=Map">
     </script>
+    </body>
 </html>
