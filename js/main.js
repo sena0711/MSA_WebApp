@@ -5,7 +5,7 @@ function initMap() {
         zoom: 8
     });
 }
-function initMapAutocomplete() {
+function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -36.8484597, lng: 174.76333150000005 },
         zoom: 13,
