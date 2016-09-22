@@ -97,27 +97,26 @@
     </header>
 
     <!-- Content Section -->
-    <div class="container">
-        <h3> My Google Maps</h3>
+ <div class="container">
+    <h3> My Google Maps</h3>
+    <input id="pac-input" class="form-control" type="text" placeholder="Search Place" required autofocus />
 
-        <!--    <input id="pac-input" name="place" type="text" class="controls" placeholder="Search Box"/>  -->
-           
-    
-
-
-        <div id="map"></div>
-
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQj_uWEPdJUlI_ZDfOQx0S7o99xMJzZOc&callback=initAutocomplete">
-        </script>
+    <div id="map"></div>
 
 
-        <!-- Footer -->
-        <footer>
-            <p> Copyright &copy; MassiveKittens 2016</p>
-            <!-- /.row -->
-        </footer>
 
-    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete">
+    </script>
+
+
+    <!-- Footer -->
+    <footer>
+        <p> Copyright &copy; MassiveKittens 2016</p>
+        <!-- /.row -->
+    </footer>
+
+
+</div>
     <!-- /.container -->
 
 
