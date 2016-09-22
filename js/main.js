@@ -4,7 +4,7 @@ app.service('Map', function($q) {
     
     this.init = function() {
         var options = {
-            center: new google.maps.LatLng(40.7127837, -74.00594130000002),
+            center: new google.maps.LatLng(-36.8484597, -74.00594130000002),
             zoom: 13,
             disableDefaultUI: true    
         }
@@ -40,7 +40,7 @@ app.service('Map', function($q) {
 app.controller('newPlaceCtrl', function($scope, Map) {
     
     $scope.place = {};
-    api
+    
     $scope.search = function() {
         $scope.apiError = false;
         Map.search($scope.searchPlace)
