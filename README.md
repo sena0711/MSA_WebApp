@@ -1,29 +1,3 @@
-MSA_WebApp
-**Install Browserify**
-
-```shell
-npm install -g browserify
-```
-
-**Fetch dependencies**
-
-```shell
-npm install
-```
-
-**Compile .ts files**
-
-Either enter the following command
-
-```shell
-node node_modules/typescript/bin/tsc.js
-```
-
-or use the `tsc` script from our `package.json` with
-
-```shell
-npm run tsc
-```
 
 **Run Browserify**
 
