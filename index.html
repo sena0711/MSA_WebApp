@@ -63,102 +63,136 @@
 
 </head>
 
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start MassiveKittens</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/sena0711/MSA_WebApp.git">Repository</a>
-                    </li>
+<body>  
+ <div class="container"
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Start MassiveKittens</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sena0711/MSA_WebApp.git">Repository</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.navbar-collapse -->
+            <!-- /.container -->
+        </nav>
+        <!-- Full Width Image Header with Logo -->
+        <!-- Image backgrounds are set within the full-width-pics.css file. -->
+        <header class="image-bg-fluid-height">
+            <img class="img-responsive img-center" src="/image/massivekittens2.png" alt="">
+        </header>
+
+        <!-- Content Section -->
+
+    <div class="container">
+
+        <div class="row">
+                <div class="col-md-9 portfolio-item">
+        
+                    <p>iF PAGE DID NOT LOAD CORRECTLY PRESS F5 OR RELOAD .</p>
+                </div>
         </div>
-        <!-- /.container -->
-    </nav>
-    <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="/image/massivekittens2.png" alt="">
-    </header>
 
-    <!-- Content Section -->
 
- <div class="container">
+        <h3> Google Maps</h3>
+        <p>Search shows, post offices, many locations!</p>
+        <input id="pac-input" class="form-control" type="text" placeholder="Search Place" required autofocus />
 
-      <div class="row">
-            <div class="col-md-9 portfolio-item">
-       
-                <p>iF PAGE DID NOT LOAD CORRECTLY PRESS F5 OR Reload .</p>
+        <div id="map"></div>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete">
+        </script>
+     </div>    <!-- End of container -->
+
+      <!-- start of container-fluid -->
+    <!-- <div class="container-fluid" novalidate 
+        ng-submit="send()">
+            <div class="row">    
+            <div class="col-sm-6">
+                <label for="resLat" class="col-xs-2 control-label">Latitude</label>
+                    <div class="col-xs-10">
+                    <input name="resLat" type="number" class="form-control" 
+                    ng-model="place.lat" required />
+                    </div>
+                
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="resLng" class="col-xs-2 control-label">Longitude</label>
+                    
+                    <div class="col-xs-10">
+                    <input name="resLng" type="number" class="form-control" 
+                    ng-model="place.lng" required />
+                    </div>
+
+                </div>
             </div>
-</div>
+        </div>
+    <!-- end of container-fluid -->
+
+      <div class="container"> 
+
+          <div class="col-sm-2"> 
+            <div id="fb-root"></div>
+            <div class="fb-share-button" data-href="http://massivekittens.azurewebsites.net/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmassivekittens.azurewebsites.net%2F&amp;src=sdkpreparse">Share</a></div>
+        </div>
+        <div class="col-sm-2"> Sena Kim</div>
+        <div class="col-sm-4"> sena0711@gmail.com</div>
+        <div class="col-sm-4"> love-diving@hotmail.com</div>
 
 
-
-    <h3> My Google Maps</h3>
-    <input id="pac-input" class="form-control" type="text" placeholder="Search Place" required autofocus />
-
-    <div id="map"></div>
+        </div>
 
 
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete">
-    </script>
-
-
-        <p>Fb Share</p>
-
-<div id="fb-root"></div>
+       
+            <!-- Footer -->
+          <footer>
+                <p> Copyright &copy; MassiveKittens 2016</p>
+                <!-- /.row -->
+        </footer>
 
 
-<div class="fb-share-button" data-href="http://massivekittens.azurewebsites.net/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmassivekittens.azurewebsites.net%2F&amp;src=sdkpreparse">Share</a></div>
-    <!-- Footer -->
-    <footer>
-        <p> Copyright &copy; MassiveKittens 2016</p>
-        <!-- /.row -->
-    </footer>
+    </div>
+            <!-- /.container -->
 
 
-</div>
-    <!-- /.container -->
+            <!-- 
+                    NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)
+                    will sort that in later bootcamps with task-runners and the like.
+                    For now this is just a demonstration.
+
+                    Alternatively can use CDNs for bootstrap/jquery
+                -->
 
 
-    <!-- 
-            NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)
-            will sort that in later bootcamps with task-runners and the like.
-            For now this is just a demonstration.
-
-            Alternatively can use CDNs for bootstrap/jquery
-        -->
-
-
-    <!--jQuery Script-->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <!--Bootstrap Script-->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--SoundCloud SDK-->
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-    <!--Custom Script-->
-    <script src="./js/main.js"></script>
-    <!--Google Map API KEY and Script-->
-
+            <!--jQuery Script-->
+            <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+            <!--Bootstrap Script-->
+            <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!--SoundCloud SDK-->
+            <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+            <!--Custom Script-->
+            <script src="./js/main.js"></script>
+            <!--Google Map API KEY and Script-->
+ </div>
 </body>
 
 </html>
