@@ -6,6 +6,7 @@
           });
       }
 
+ 
       function initAutocomplete() {
           var map = new google.maps.Map(document.getElementById('map'), {
               center: { lat: -36.8484597, lng: 174.76333150000005 },
