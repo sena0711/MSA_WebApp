@@ -15,7 +15,11 @@
     <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!--Custom CSS-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="./css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/txtstyle.css" />
+		<link href='http://fonts.googleapis.com/css?family=Montserrat|Sail|Concert+One' rel='stylesheet' type='text/css' />
+    
 
     <!-- 
         To collect end-user usage analytics about your application,insert the following script into each page you want to track.
@@ -64,6 +68,25 @@
 </head>
 
 <body>  
+
+        <div id="plax1">
+        &nbsp;
+        </div>
+          
+        <div id="plax2">
+        &nbsp;
+        </div>
+    
+        <div id="plax3">
+        &nbsp;
+        </div>
+        <div id="plax4">
+        &nbsp;
+        </div>
+        <div id="plax5">
+        &nbsp;
+        </div>
+
  <div class="container"
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -96,10 +119,19 @@
         </nav>
         <!-- Full Width Image Header with Logo -->
         <!-- Image backgrounds are set within the full-width-pics.css file. -->
+        
+
         <header class="image-bg-fluid-height">
+              <section class="sub" id="sub1">
+				<div class="example">
+					<h3 id="example1">I wanna be curved</h3>
+				</div>
             <img class="img-responsive img-center" src="/image/massivekittens2.png" alt="">
         </header>
-
+          
+				
+			</section>
+		
         <!-- Content Section -->
 
     <div class="container">
@@ -117,8 +149,8 @@
         <input id="pac-input" class="form-control" type="text" placeholder="Search Place" required autofocus />
 
         <div id="map"></div>
-
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete">
+<!--Google Map API KEY and Script-->
+        <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete" async defer>
         </script>
      </div>    <!-- End of container -->
 
@@ -184,6 +216,7 @@
 
 
             <!--jQuery Script-->
+            
             <script src="./node_modules/jquery/dist/jquery.min.js"></script>
             <!--Bootstrap Script-->
             <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -191,7 +224,58 @@
             <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
             <!--Custom Script-->
             <script src="./js/main.js"></script>
-            <!--Google Map API KEY and Script-->
+            
+
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.arctext.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+			var $headline = $('#headline').hide();
+		
+			var $word1		= $('#arc-wrapper').find('h3').hide();
+			var $word2		= $('#arc-wrapper').find('h4').hide();
+			
+			var $example1	= $('#example1').hide();
+		
+			
+			google.load('webfont','1');
+			
+			google.setOnLoadCallback(function() {
+				WebFont.load({
+					google		: {
+						families	: ['Montserrat','Concert One']
+					},
+					fontactive	: function(fontFamily, fontDescription) {
+						init();
+					},
+					fontinactive	: function(fontFamily, fontDescription) {
+						init();
+					}
+				});
+			});
+			
+			function init() {
+			
+				$headline.show().arctext({radius: 400});
+					
+				$word1.show().arctext();
+				$word2.show().arctext({radius: 148, dir: -1});
+				
+				$example1.show().arctext({radius: 300});
+				$example2.show().arctext({radius: 400, dir: -1});
+		
+			};
+	
+   
+        var p = new Parallax.ParallaxContainer(window, 0.7);
+        for (i = 1; i <= 5; ++i) {
+            var star_layer = new Parallax.ParallaxSurface(document.querySelector('#plax' + i));
+            p.addSurface(star_layer);
+        }
+
+    </script>
  </div>
 </body>
 
