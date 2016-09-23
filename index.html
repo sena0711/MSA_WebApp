@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="css/txtstyle.css" />
     <link rel="stylesheet" href="app.css" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Montserrat|Sail|Concert+One' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script>
+
     
 
     <!-- 
@@ -156,9 +159,10 @@
         <input id="pac-input" class="form-control" type="text" placeholder="Search Place" required autofocus />
 
         <div id="map"></div>
-<!--Google Map API KEY and Script-->
+        <!--Google Map API KEY and Script-->
         <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete" async defer>
         </script>
+
      </div>    <!-- End of container -->
 
       <!-- start of container-fluid -->
@@ -172,7 +176,15 @@
         </div>
         <div class="col-sm-2"> love-diving@hotmail.com</div>
         <div class="col-sm-4"> sena0711@gmail.com</div>
-        <div class="col-sm-4" id="content"></div>
+        <div class="col-sm-4" id="content">a</div>
+       
+
+    <script>
+    require(["bundle"], function(app) {
+        var element = document.getElementById("content");
+        app.start(function(s) { element.innerText = s; } );
+    });
+    </script>
 
 
         </div>
