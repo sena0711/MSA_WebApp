@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/txtstyle.css" />
     <link rel="stylesheet" href="app.css" type="text/css" />
-	
+	<link href='http://fonts.googleapis.com/css?family=Montserrat|Sail|Concert+One' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="app.css" type="text/css" />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script>
 
@@ -72,6 +72,8 @@
 </head>
 
 <body>  
+
+      
  <div class="container"
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -107,9 +109,9 @@
         
 
         <header class="image-bg-fluid-height">
-            <div class="col-xs-4"></div>
+          
             <div class="col-xs-12">
-              <section class="sub" id="sub1">
+             
 				<div class="example">
 					<h3 id="example1">..curved..</h3>
 				</div>
@@ -141,7 +143,7 @@
 
         <div id="map"></div>
         <!--Google Map API KEY and Script-->
-        <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete" >
+        <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeO8R05vfmpwmt64v0EtifkQ_KYvAEd50&libraries=places&callback=initAutocomplete"  >
         </script>
 
      </div>    <!-- End of container -->
@@ -189,24 +191,27 @@
                     For now this is just a demonstration.
 
                     Alternatively can use CDNs for bootstrap/jquery
-                        -->
-            <!-- arctext plugin Script-->
-            <script type="text/javascript" src="js/jquery.arctext.js"></script>
-            <!--colour lettering plugin Script-->
-            <script type="text/javascript" src="js/jquery.lettering.js"></script>
+                -->
+
+
             <!--jQuery Script-->
-          
+            <script type="text/javascript" src="js/jquery.requred.min.js"></script>
             <script src="./node_modules/jquery/dist/jquery.min.js"></script>
             <!--Bootstrap Script-->
             <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
- 
+            <!--SoundCloud SDK-->
+            <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
             <!--Custom Script-->
             <script src="./js/main.js"></script>
             
 
+   
+     <!-- arctext plugin Script-->
+	<script type="text/javascript" src="js/jquery.arctext.js"></script>
+     <!--colour lettering plugin Script-->
+    <script type="text/javascript" src="js/jquery.lettering.js"></script>
 
-
-
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
    
 
 	<script type="text/javascript">
