@@ -215,7 +215,7 @@
 
 
             <!--jQuery Script-->
-            <script type="text/javascript" src="js/jquery.requred.min.js"></script>
+          
             <script src="./node_modules/jquery/dist/jquery.min.js"></script>
             <!--Bootstrap Script-->
             <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -270,16 +270,11 @@
 				$word2.show().arctext({radius: 120, dir: -1});
 				
 				$example1.show().arctext({radius: 200});
-				$example2.show().arctext({radius: 300, dir: -2});
-		
+				
 			};
 	
    
-        var p = new Parallax.ParallaxContainer(window, 0.7);
-        for (i = 1; i <= 5; ++i) {
-            var star_layer = new Parallax.ParallaxSurface(document.querySelector('#plax' + i));
-            p.addSurface(star_layer);
-        }
+       
         
          require(["bundle"], function(app) {
         var element = document.getElementById("content");
