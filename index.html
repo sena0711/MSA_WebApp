@@ -130,11 +130,31 @@
                 <div class="col-md-9 portfolio-item">
         
                     <p>iF PAGE DID NOT LOAD CORRECTLY PRESS F5 OR RELOAD .</p>
+                    <p>Get Current weather by entering the location .</p>
                 </div>
         </div>
 
+                <div class="weather-app">
+
+
+        location:<input id="box_location" type="txt" min="100" max="300" required >
+        <button id="weatherbtn" onclick="weatherapp()">OK</button>
+        
 
         
+            <p>location: <span id="location">Auckland</span></p>
+            <p>weather: <span id="description">rain</span></p>
+            <p>Temperature: <span id="temperature">0</span></p>
+            <p>Humidity: <span id="humidity">0</span></p>
+            <p>Wind speed: <span id="wind">0</span> mph <span id="direction">N</span>
+        
+        </div>
+
+
+
+
+
+    
         <div id="demo1" >
 		<h1>search</h1>
 		</div>
@@ -202,6 +222,7 @@
            
             <!--Custom Script-->
             <script src="./js/main.js"></script>
+            <script type="text/javascript" src="./js/app.js"></script>
             
 
    

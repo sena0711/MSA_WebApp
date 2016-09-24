@@ -11,7 +11,10 @@ body {
     background-color: transparent;
       margin-top: 50px;
 }
-
+#box_location, #weatherbtn
+{
+    color: black;
+}
 h1#app-name {
     font-size:84px;
 }
